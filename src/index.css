@@ -1,13 +1,168 @@
-body {
+*,
+::after,
+::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #fff1c1;
+  color: #222946;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 1.55rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 0.25rem;
+  color: #222946;
+}
+.icon {
+  color: #222946;
+  width: 30px;
+  height: 30px;
+}
+.website {
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  color: #222946;
+  border: 2px solid #a57d42;
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.35rem;
+  border-radius: 0.25rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.website:hover {
+  color: #222946;
+  background: #a57d42;
+}
+.section {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.title {
+  text-align: center;
+  margin-top: 5rem;
+}
+.brewery {
+  padding-bottom: 5rem;
+}
+.underline {
+  width: 5rem;
+  height: 0.25rem;
+  background: #c59d5f;
+  margin-left: auto;
+  margin-right: auto;
+}
+.brewery-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 0.25rem solid #c59d5f;
+  margin: 10px;
+}
+.brewery-piece {
+  padding: 10px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 0.25rem;
+}
+.brewery-title {
+  font-size: 1.2rem;
+  width: 100%;
+  line-height: 1.2;
+  color: #a57d42;
+}
+.match-title {
+  font-size: 2rem;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  margin-top: 1rem;
+  letter-spacing: 0.3rem;
+}
+.loading {
+  text-align: center;
+  width: 90vw;
+  max-width: 620px;
+  margin: 5rem auto;
+}
+.btn {
+  background: transparent;
+  color: #a57d42;
+  padding: 0.5rem 0.6rem 0.35rem;
+  display: inline-block;
+  transition: all 0.3s linear;
+  font-size: 0.875rem;
+  border: 2px solid #a57d42;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+.btn:hover {
+  color: #222946;
+  background: #a57d42;
+}
+input {
+  width: 40%;
+  background: transparent;
+  padding: 0.25rem;
+  padding-left: 1rem;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  border-color: transparent;
+  font-size: 1rem;
+  flex: 1 0 auto;
+  border: 3px solid #ab8f67;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 2rem 0;
+}
+input::placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #222946;
+}
+
+@media screen and (max-width: 960px) {
+  .section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 480px) {
+  .section {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
